@@ -10,6 +10,7 @@ def magic_calculation(a, b, c):
         return a * b - c
 
 if __name__ == "__main__":
+    
     print(magic_calculation(3, 5, 7))
     print(magic_calculation(8, 6, 10))
     print(magic_calculation(5, 3, 1))
