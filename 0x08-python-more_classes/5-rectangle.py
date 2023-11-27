@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    2-rectangle: class Rectangle
+    5-rectangle: class Rectangle
 """
 
 
@@ -89,3 +89,31 @@ class Rectangle:
         if self.__width is 0 or self.__height is 0:
             return 0
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """
+            return string representation of a rectangle
+        """
+        rectangle = ""
+        if self.__width is 0 or self.__height is 0:
+            return rectangle
+
+        for i in range(self.__height - 1):
+            rectangle += "#" * self.__width + "\n"
+        rectangle += "#" * self.__width
+
+        return rectangle
+
+    def __repr__(self):
+        """
+            returns a string representation of the rectangle to be
+            able to recreate a new instance
+        """
+        rectangle = "Rectangle({}, {})".format(self.__width, self.__height)
+        return rectangle
+
+    def __del__(self):
+        """
+            properly deletes the instance of a class.
+        """
+        print("Bye rectangle...")
